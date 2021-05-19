@@ -1,0 +1,15 @@
+//Header.scss   can use sass and css modules together
+@import "../../scss/variables";
+@import "../../scss/font";
+
+.header{
+  display: flex;
+  align-items: center;
+  @include siteFont;
+  font-size: 2.5rem;
+  color: var(--c1);
+  padding-left: var(--titlePadding);
+  border-bottom: 2px var(--c1) solid;
+  
+}
+

@@ -1,0 +1,84 @@
+//SendComponent.scss   can use sass and css modules together
+@import "../../scss/variables";
+@import "../../scss/font";
+
+.sendCompgrid{
+  display: grid;
+  width: 100%;
+  // position:sticky;
+  position: absolute;
+  bottom: 0;
+  height: var(--sendComponentHeight);
+  opacity: 1;
+  grid-template-columns: 75px 1fr 25%;
+  grid-template-areas: "button input features";
+  background: var(--c2);
+}
+ .sendCompbutton{
+    padding: 15px var(--buttonPadding);
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    @include siteFont;
+    color: var(--c1);
+    background: inherit;
+    transition: all .45s ;
+    @include buttonHover;
+}
+.sendCompinput{
+    display: flex;
+    margin-top: var(--buttonPadding);
+    padding: var(--buttonPadding)+ 15px;
+    width: 100%;
+    height: 75%;
+    @include accentFont;
+    font-size: 1.25rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--c2);
+    background: var(--c1);
+    filter: saturate(100%) brightness(150%);
+}
+.sendCompfeatures{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas: "emojis gifs photos dark";
+    background: inherit;
+    &--emojis{
+      @include flexCenter;
+      position:relative;
+      text-align: center;
+      grid-area: emojis;
+      padding-top: var(--buttonPadding);
+      // background: var(--c3);
+      transition: all .45s ;
+      @include buttonHover;
+    }
+    &--gifs{
+      @include flexCenter;
+      position:relative;
+      text-align: center;
+      grid-area: gifs;
+      // background: var(--c3);
+      transition: all .45s ;
+      @include buttonHover;
+    }
+    &--photos{
+      @include flexCenter;
+      position:relative;
+      text-align: center;
+      grid-area: photos;
+      // background: var(--c3);
+      transition: all .45s ;
+      @include buttonHover;
+    }
+    &--dark{
+      @include flexCenter;
+      position:relative;
+      text-align: center;
+      grid-area: dark;
+      // background: var(--c3);
+      transition: all .45s ;
+      @include buttonHover;
+    }
+}

@@ -1,0 +1,18 @@
+@import "variables";
+@import "font";
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  background: var(--color2);
+}
+body{
+  background: var(--c1);
+}
+.r {
+  border: 3px red solid;
+}
+.hide {
+  display: none;
+}
+////////////////////////////////////////
+

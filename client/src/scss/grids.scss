@@ -1,0 +1,24 @@
+@import "variables";
+@import "font";
+
+.main-grid{
+  @include grid(100%,100vh,"1fr","75px 1fr 75px");
+  grid-template-areas: "header"
+                       "body"
+                       "footer";
+  overflow: hidden;
+  &_header{
+    grid-area: header;
+    background:var(--c3)
+  }
+  &_body{
+    grid-area: body;
+    overflow-y:scroll;
+    background: var(--c1);
+  }
+  &_footer{
+    grid-area: footer;
+    background:var(--c3);
+    border-top: 2px var(--c2) solid;
+  }
+}

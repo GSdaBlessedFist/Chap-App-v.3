@@ -1,0 +1,43 @@
+//ChatArea.scss 
+@import "../../../scss/styles.scss";
+@import "../../../scss/font";
+
+@mixin messageAreaPadding{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.chatArea-grid{
+  @include grid(100%,100%,"100% 0%","50% 50%");
+  grid-template-areas: "mainchat sidechat1"
+                       "mainchat sidechat2";
+  margin: 0 auto;
+  
+  &_mainchat{
+    position: relative;
+    grid-area: mainchat;
+    // border: 2px black dotted;
+    border-right: 5px var(--c3) solid;
+    @include messageAreaPadding;
+    overflow:hidden;
+    background: #001;
+  }
+  &_sidechat1{
+    position: relative;
+    grid-area: sidechat1;
+    // border: 2px black dotted;
+    border-bottom: 5px var(--c3) solid;
+    @include messageAreaPadding;
+    overflow:hidden;
+  }
+  &_sidechat2{
+    position: relative;
+    grid-area: sidechat2;
+    // border: 2px black dotted;
+    @include messageAreaPadding;
+    overflow:hidden;
+  }
+}
